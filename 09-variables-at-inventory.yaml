@@ -2,5 +2,5 @@
   hosts: web
   tasks:
     - name: printing information
-     ansible.builtin.debug:
+      ansible.builtin.debug:
       msg: "i am learning {{COURSE}} AT {{TRAINER}} FOR {{DURATION}}"
