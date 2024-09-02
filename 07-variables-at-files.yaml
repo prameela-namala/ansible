@@ -1,0 +1,8 @@
+- name: variables at another files
+  hosts: web
+  vars_files:
+   - vars.yaml
+  tasks:
+    - name: print information
+      ansible.builtin.debug:
+        msg: "i am learning {{1}} at {{2}} for {{3}}"
