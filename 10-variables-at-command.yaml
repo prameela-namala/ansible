@@ -1,0 +1,6 @@
+- name: variables at command line
+  hosts: web
+  tasks:
+    - name: print information
+      ansible.builtin.debug:
+        msg: "print {{WISH}} {{MESSAGE}}"
