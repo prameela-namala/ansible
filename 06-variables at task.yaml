@@ -1,0 +1,22 @@
+- name: task level variables
+  hosts: web
+  vars:
+    COURSE: "aws"
+    TRAINER: "SIVA"
+    DURATION: "THREE MONTHS"
+  tasks:
+    - name: print information
+      ansible.builtin.debug:
+        msg: "i am learning {{COURSE}} trainer{{TRAINER}} duration{{DURATION}}"
+
+    - name: print information again
+      vars:
+        COURSE: "DEVOPS"
+        TRAINER: "KUMAR"
+        DURATION: "FOUR MONTHS"
+      ansible.builtin.debug:
+        msg: "i am learning {{COURSE}} FOR {{DURATION}} AT {{TRAINER}}"  
+
+    - name: printing information again and again
+      ansible.builtin.debug:
+        msg: "i am learning {{COURSE}} FOR {{DURATION}} AT {{TRAINER}}"  
