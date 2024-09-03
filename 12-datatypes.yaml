@@ -1,4 +1,4 @@
-- name: given number is less than or greater than 10
+- name: print course information
   hosts: web
   connection: local
   vars:
