@@ -1,0 +1,29 @@
+- name: given number is less than or greater than 10
+  hosts: web
+  connection: local
+  vars:
+    COURSE: DEVOPS
+    DURATION: 120 HOURS
+    TOPICS:
+     - LINUX
+     - AWS
+     - SHELL SCRIPT
+     - TERRAFORM
+     - ANSIBLE
+     - K8
+    live: true
+    tools:
+      ci: jenkins
+      cm: ansible
+      cloud: aws
+      aws:
+       - ec2
+       - s3
+  tasks:
+   - name: print course information
+     ansible.builtin.debug:
+      msg: "i am learning {{COURSE}} , with {{DURATION}} topics are {{TOPICS}} , Having live sessions {{LIVE}}, using tools are:{{TOOLS}}, "     
+
+       
+
+      
