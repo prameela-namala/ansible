@@ -4,11 +4,11 @@
   tasks:
   - name: install nginx if redhat
     ansible.builtin.dnf:
-      - name: nginx
-        state: present
-        when: ansible_os_family == "RedHat"
+      name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"
   - name: installing nginx if debian
     ansible.builtin.apt:
-      - name: nginx
-        state: present
-        when: ansible_os_family == "Debian"
+       name: nginx
+       state: present
+    when: ansible_os_family == "Debian"
