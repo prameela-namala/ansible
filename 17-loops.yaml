@@ -5,7 +5,7 @@
    - name: print information
      ansible.builtin.debug:
       msg: "hello {{item}}"
-  loop:
+     loop:
   - world
   - india
   - world
