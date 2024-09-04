@@ -1,6 +1,5 @@
 - name: checking command verses shell
-  hosts: local
-  connection: local
+  hosts: web
   tasks:
   # - name: execute command
    # ansible.builtin.command: ls -ltr > /tmp/output.txt
