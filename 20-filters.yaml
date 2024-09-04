@@ -1,5 +1,6 @@
 - name: demo of filters or functions
-  hosts: web
+  hosts: local
+  connection: local
   tasks:
   
   - name: print default variable
@@ -57,4 +58,4 @@
     vars:
      myip: 123.12.123
     ansible.builtin.debug:
-     msg: "myip | ansible.utils.ipv4"     
+     msg: "{{ myip | ansible.utils.ipv4 }}"     
