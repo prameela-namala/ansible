@@ -1,0 +1,13 @@
+- name: installing packages
+  hosts: web
+  tasks:
+   - name: installing nginx if REDHAT
+     ansible.builtin.dnf:
+      - name: nginx
+        state: present
+        when: ansible_os_family == "RedHat"
+   - name: installing nginx if debian
+     ansible.builtin.apt:
+      - name: nginx
+        state: present
+        when: ansible_os_family == "Debian"
