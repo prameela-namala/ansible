@@ -1,5 +1,6 @@
 - name: installing packages
   hosts: web
+  become: yes
   tasks:
    - name: installing nginx if REDHAT
      ansible.builtin.dnf:
