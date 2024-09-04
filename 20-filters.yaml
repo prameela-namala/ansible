@@ -25,14 +25,14 @@
     vars:
      numbers: [1 2 3 44 55 55 99 99 00]
     ansible.builtin.debug:
-     msg: "{{numbers | unique}}"
+     msg: "{{ numbers | unique }}"
 
 
   - name: get the min and max numbers
     vars:
      numbers: [11 22 3366 99 100] 
     ansible.builtin.debug:
-     msg: " Min: {{ numbers | min }}, Max: {{ numbers | max }} "
+     msg: "Min: {{ numbers | min }}, Max: {{ numbers | max }}"
 
 
   - name: convert map to list
