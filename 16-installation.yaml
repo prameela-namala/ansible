@@ -1,12 +1,7 @@
 - name: installing packages
   hosts: web
-  connection: local
   become: yes
   tasks:
-  - name: print the stats
-    ansible.builtin.debug:
-      msg: "{{ ansible_facts }}"
-  
   - name: install nginx if redhat
     ansible.builtin.dnf:
       - name: nginx
