@@ -1,6 +1,6 @@
 - name: install packages we need only
   hosts: local
-  connections: local
+  connection: local
   tasks:
   - name: installing packages we need only
     ansible.builtin.package:
