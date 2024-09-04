@@ -1,5 +1,6 @@
 - name: installing packages
   hosts: web
+  connection: local
   become: yes
   tasks:
   - name: print the stats
