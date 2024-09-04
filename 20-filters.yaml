@@ -1,6 +1,5 @@
 - name: demo of filters or functions
-  hosts: local
-  connection: local
+  hosts: web
   tasks:
   
   - name: print default variable
@@ -32,7 +31,7 @@
     vars:
      numbers: [11 22 3366 99 100] 
     ansible.builtin.debug:
-     msg: " Min: "{{ numbers | min }}", Max: "{{ numbers | max}}"  "
+     msg: " Min: {{ numbers | min }}, Max: {{ numbers | max}} "
 
 
   - name: convert map to list
