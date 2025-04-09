@@ -2,7 +2,7 @@
   hosts: [web]
   tasks:
    - name: install packages
-     ansile.builtin.package:
+     ansible.builtin.package:
        name: "{{item}}"
        state: present
      loop:
